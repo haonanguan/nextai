@@ -27,7 +27,9 @@ const ChatComponent = (props) => {
         transcript, //update automatically whenever someone talks, because this is a hook
         listening,
         resetTranscript,
+        // eslint-disable-next-line no-unused-vars
         browserSupportsSpeechRecognition,
+        // eslint-disable-next-line no-unused-vars
         isMicrophoneAvailable,
     } = useSpeechRecognition();
 
@@ -60,6 +62,7 @@ const ChatComponent = (props) => {
             (async () => await onSearch(transcript))();
             setIsRecording(false);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [listening, transcript]);
 
     const talk = (what2say) => {
