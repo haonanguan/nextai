@@ -50,12 +50,14 @@ const RenderQA = (props) => {
                             <div style={userStyle}>{each.question}</div>
                         </div>
                         <div style={agentContainer}>
-                            <div style={agentStyle}>{each.answer}</div>
+                            <div style={agentStyle}>
+                                {each.answer || (isLoading && <Spin size="small" />)}
+                            </div>
                         </div>
                     </div>
                 );
             })}
-            {isLoading && <Spin size="large" style={{ margin: "10px" }} />}
+            {/* {isLoading && <Spin size="large" style={{ margin: "10px" }} />} */}
         </>
     );
 };

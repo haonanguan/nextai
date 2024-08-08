@@ -29,7 +29,10 @@ const App = () => {
     const { Title } = Typography;
 
     const handleResp = (question, answer) => {
-        setConversation([...conversation, { question, answer }]);
+        // setConversation([...conversation, { question, answer }]);
+        setConversation((prev) =>
+            prev.map((item) => (item.question === question ? { question, answer } : item))
+        );
     };
 
     return (
@@ -62,6 +65,7 @@ const App = () => {
                         handleResp={handleResp}
                         isLoading={isLoading}
                         setIsLoading={setIsLoading}
+                        setConversation={setConversation}
                     />
                 </div>
             </Layout>
