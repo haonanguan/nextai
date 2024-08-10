@@ -7,7 +7,8 @@ import Speech from "speak-tts";
 
 const { Search } = Input;
 
-const DOMAIN = "http://localhost:8080";
+// const DOMAIN = "http://localhost:8080";
+const DOMAIN = "https://tmxmm6n9rm.us-east-2.awsapprunner.com";
 
 const searchContainer = {
     display: "flex",
